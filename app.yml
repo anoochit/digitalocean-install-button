@@ -10,5 +10,7 @@ config:
       sudo: ['ALL=(ALL) NOPASSWD:ALL']
   packages:
     - git
+    - nodejs
+    - npm
   runcmd:
-    - cd /home/nodeapp && git clone https://github.com/anoochit/digitalocean-install-button.git nodeapp && cd nodeapp && bash provision.sh
+    - cd /home/nodeapp && git clone https://github.com/anoochit/digitalocean-install-button.git nodeapp && cd nodeapp && npm install && node bin/www
