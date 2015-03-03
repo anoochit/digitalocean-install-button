@@ -13,4 +13,4 @@ config:
     - nodejs
     - npm
   runcmd:
-    - cd /home/nodeapp && git clone https://github.com/anoochit/digitalocean-install-button.git nodeapp && cd nodeapp && npm install && node bin/www
+    - aliase node='nodejs' && cd /home/nodeapp && git clone https://github.com/anoochit/digitalocean-install-button.git nodeapp && cd nodeapp && npm install && node bin/www
