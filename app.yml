@@ -1,0 +1,14 @@
+name: nodeapp
+image: ubuntu-14-04-x64
+min_size: 512mb
+config:
+  #cloud-config
+  users:
+    - name: nodeapp
+      groups: sudo
+      shell: /bin/bash
+      sudo: ['ALL=(ALL) NOPASSWD:ALL']
+  packages:
+    - git
+  runcmd:
+    - cd /home/nodeapp && git clone https://github.com/anoochit/digitalocean-install-button.git nodeapp && cd nodeapp && bash provision.sh
